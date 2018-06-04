@@ -2,12 +2,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const morgan = require('morgan');
+
 
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
 const app = express();
+
+// Log server requests
+app.use(morgan('tiny'));
 
 // bodyparser middleware
 app.use(bodyParser.urlencoded({extended: false}));

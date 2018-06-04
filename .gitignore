@@ -2,4 +2,5 @@
 
 package-lock.json
 
-/config
+# mLab api key, jwt secret
+/config/keys.js
